@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Objects;
+
 public class DeleteItem extends AppCompatActivity {
 
     RadioButton lostButton, foundButton;
@@ -41,10 +43,10 @@ public class DeleteItem extends AppCompatActivity {
         String lng = getIntent().getStringExtra("lng");
         String lat = getIntent().getStringExtra("lat");
 
-        if(type == "LOST") {
+        if(Objects.equals(type, "LOST")) {
             lostButton.setChecked(true);
         }
-        if (type == "FOUND") {
+        if (Objects.equals(type, "FOUND")) {
             foundButton.setChecked(true);
         }
 

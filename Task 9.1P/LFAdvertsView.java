@@ -57,8 +57,8 @@ public class LFAdvertsView extends AppCompatActivity {
                 intent.putExtra("contact", lostfoundItem.getContact());
                 intent.putExtra("description", lostfoundItem.getDescription());
                 intent.putExtra("time", lostfoundItem.getTime());
-                intent.putExtra("longitude", lostfoundItem.getLng());
-                intent.putExtra("latitude", lostfoundItem.getLat());
+                intent.putExtra("lng", lostfoundItem.getLng());
+                intent.putExtra("lat", lostfoundItem.getLat());
                 startActivity(intent);
             }
         });

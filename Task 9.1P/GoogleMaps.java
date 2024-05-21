@@ -40,7 +40,6 @@ public class GoogleMaps extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
         List<LostFoundItem> items = lostFoundItemDB.getAllItem();
 
         for (LostFoundItem item : items) {
@@ -48,7 +47,6 @@ public class GoogleMaps extends FragmentActivity implements OnMapReadyCallback {
             double lng = Double.parseDouble(item.getLng());
             LatLng location = new LatLng(lat, lng);
             mMap.addMarker(new MarkerOptions().position(location).title(item.getItemName()));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
         }
         /*
         //Add a marker in Sydney and move the camera
